@@ -90,3 +90,8 @@ body {
 .operator {
   font-size: 1.3em;
 }
+
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}

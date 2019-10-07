@@ -1,10 +1,9 @@
-const body = document.body
 const screen = document.querySelector("#screen")
 const spans = document.querySelectorAll("span:not(.operator)");
 const clear = document.querySelector("#clear")
 const operators = document.querySelectorAll(".operator:not(#clear):not(#equals)")
 const equals = document.querySelector("#equals")
-let stored = ""
+
 
 function formatOperators(items){
     items.forEach(item => {
@@ -38,6 +37,6 @@ operators.forEach(item => {
 })
 
 equals.addEventListener("click", () => {
-    stored = screen.textContent
+    const stored = screen.textContent
     screen.textContent = eval(stored)
 })
