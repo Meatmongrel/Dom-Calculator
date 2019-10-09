@@ -24,7 +24,7 @@ function formatOperators(items){
 formatOperators(operators)
 
 function evaluate(fn){
-    if(fn.slice(-3) === "/ 0"){
+    if(fn.textContent === "NaN" || fn.textContent === "Infinity"){
         screen.textContent = "Error"
     }
     else {
